@@ -2,7 +2,6 @@ const path = require("path");
 require("dotenv").config({ path: path.join(__dirname, "..", ".env") });
 const express = require("express");
 const cors = require("cors");
-const http = require("http");
 const https = require("https");
 const fs = require("fs");
 
@@ -221,10 +220,8 @@ app.get("/accounts", async (req, res) => {
         headers: {
           Authorization: `Basic ${credentials}`,
           "x-moov-version": "v2025.07.00",
-          Origin:
-            "https://test-embeddables-g50x6erea-kims-projects-3d64e480.vercel.app/",
-          Referer:
-            "https://test-embeddables-g50x6erea-kims-projects-3d64e480.vercel.app/",
+          Origin: "https://test-embeddables-be.vercel.app/",
+          Referer: "https://test-embeddables-be.vercel.app/",
         },
       }
     );
