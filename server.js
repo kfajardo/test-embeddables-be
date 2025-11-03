@@ -13,7 +13,7 @@ app.use(
     origin: [
       "http://localhost:5173",
       "https://localhost:5173",
-      "https://test-embeddables-4pc8zsxzm-kims-projects-3d64e480.vercel.app/",
+      "https://test-embeddables-fe.vercel.app",
     ],
   })
 );
@@ -220,8 +220,8 @@ app.get("/accounts", async (req, res) => {
         headers: {
           Authorization: `Basic ${credentials}`,
           "x-moov-version": "v2025.07.00",
-          Origin: "https://test-embeddables-be.vercel.app/",
-          Referer: "https://test-embeddables-be.vercel.app/",
+          Origin: "https://test-embeddables-be.vercel.app",
+          Referer: "https://test-embeddables-be.vercel.app",
         },
       }
     );
