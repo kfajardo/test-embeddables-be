@@ -11,7 +11,11 @@ const app = express();
 // Middleware
 app.use(
   cors({
-    origin: ["http://localhost:5173", "https://localhost:5173"],
+    origin: [
+      "http://localhost:5173",
+      "https://localhost:5173",
+      "https://test-embeddables-4pc8zsxzm-kims-projects-3d64e480.vercel.app/",
+    ],
   })
 );
 app.use(express.json());
@@ -217,8 +221,10 @@ app.get("/accounts", async (req, res) => {
         headers: {
           Authorization: `Basic ${credentials}`,
           "x-moov-version": "v2025.07.00",
-          Origin: "https://localhost:3000",
-          Referer: "https://localhost:3000",
+          Origin:
+            "https://test-embeddables-g50x6erea-kims-projects-3d64e480.vercel.app/",
+          Referer:
+            "https://test-embeddables-g50x6erea-kims-projects-3d64e480.vercel.app/",
         },
       }
     );
